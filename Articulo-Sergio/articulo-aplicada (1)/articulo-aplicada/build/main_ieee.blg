@@ -1,14 +1,14 @@
-[1] Config.pm:328> INFO - This is Biber 2.21
-[2] Config.pm:331> INFO - Logfile is 'build/main_ieee.blg'
-[257] biber:342> INFO - === Tue Nov 25, 2025, 20:23:34
-[328] Biber.pm:421> INFO - Reading 'build/main_ieee.bcf'
-[500] Biber.pm:1002> INFO - Found 19 citekeys in bib section 0
-[540] Biber.pm:4487> INFO - Processing section 0
-[559] Biber.pm:4678> INFO - Looking for bibtex file 'bibliography/references.bib' for section 0
-[583] bibtex.pm:1713> INFO - LaTeX decoding ...
-[670] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography/references.bib'
-[889] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[890] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[891] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
-[914] bbl.pm:676> INFO - Writing 'build/main_ieee.bbl' with encoding 'UTF-8'
-[954] bbl.pm:779> INFO - Output to build/main_ieee.bbl
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'build/main_ieee.blg'
+[77] biber:342> INFO - === Tue Dec  9, 2025, 07:40:11
+[99] Biber.pm:421> INFO - Reading 'build/main_ieee.bcf'
+[162] Biber.pm:1002> INFO - Found 20 citekeys in bib section 0
+[177] Biber.pm:4487> INFO - Processing section 0
+[185] Biber.pm:4678> INFO - Looking for bibtex file 'bibliography/references.bib' for section 0
+[198] bibtex.pm:1713> INFO - LaTeX decoding ...
+[222] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography/references.bib'
+[323] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[323] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[324] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[337] bbl.pm:676> INFO - Writing 'build/main_ieee.bbl' with encoding 'UTF-8'
+[350] bbl.pm:779> INFO - Output to build/main_ieee.bbl

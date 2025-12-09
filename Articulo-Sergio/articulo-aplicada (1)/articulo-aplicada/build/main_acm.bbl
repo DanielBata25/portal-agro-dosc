@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{19}
+\begin{thebibliography}{20}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -88,6 +88,20 @@
 \newblock
 \urldef\tempurl%
 \url{https://www.researchgate.net/profile/Dorcas-Esther/publication/391018514_Feature_Flags_and_Dynamic_Configuration_in_Microservices/links/6808366260241d5140151f49/Feature-Flags-and-Dynamic-Configuration-in-Microservices.pdf}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Dupont and Legrand(2022)]%
+        {dupont2022unifying}
+\bibfield{author}{\bibinfo{person}{Julien Dupont} {and} \bibinfo{person}{Elise
+  Legrand}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{From feature models to feature toggles in
+  practice}.
+\newblock \bibinfo{journal}{\emph{HAL Science}} (\bibinfo{year}{2022}).
+\newblock
+\urldef\tempurl%
+\url{https://inria.hal.science/hal-03788437/file/Unifying_SPL_and_Feature_Flags%282%29.pdf}
 \showURL{%
 \tempurl}
 

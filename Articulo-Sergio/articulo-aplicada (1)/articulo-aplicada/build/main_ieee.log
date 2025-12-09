@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.25)  25 NOV 2025 20:24
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.25)  9 DEC 2025 07:40
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -734,10 +734,10 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
 (build/main_ieee.aux
-LaTeX Info: Redefining \. on input line 30.
-LaTeX Info: Redefining \% on input line 30.
+LaTeX Info: Redefining \. on input line 14.
+LaTeX Info: Redefining \% on input line 14.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 30.
+(babel)             Reported on input line 14.
 )
 \openout1 = `main_ieee.aux'.
 
@@ -895,11 +895,16 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-(./sections/00_abstract.tex) (./sections/01_introduccion.tex) (./sections/02_re
-lacionados.tex [1
+(./sections/00_abstract.tex
+Underfull \vbox (badness 2951) has occurred while \output is active []
+
+) (./sections/01_introduccion.tex
+File: graphics/brecha_digital_agro.png Graphic file (type bmp)
+<graphics/brecha_digital_agro.png>
+[1
 
 
-] (./tables/toggle_types.tex
+]) (./sections/02_relacionados.tex [2] [3] (./tables/toggle_types.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 6.
 
@@ -927,25 +932,64 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--13
 \TU/lmr/m/n/9 tamiento según rol
  []
 
-)) (./sections/03_metodologia.tex [2]) (./sections/04_implementacion.tex (./tab
-les/arquitectura_actual.tex
+)) (./sections/03_metodologia.tex [4]
+File: graphics/stack_tecnologico.png Graphic file (type bmp)
+<graphics/stack_tecnologico.png>
+) (./sections/04_implementacion.tex [5]
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+[]\TU/ptm/bx/it/10 Detener el \TU/lmr/m/it/10 Application Pool \TU/ptm/bx/it/10
+ en el servidor
+ []
+
+(./tables/arquitectura_actual.tex
 File: graphics/arquitectura_actual.png Graphic file (type bmp)
 <graphics/arquitectura_actual.png>
-) (./tables/flujo_toggle_backend.tex
+)
+Underfull \hbox (badness 8189) in paragraph at lines 56--57
+ []\TU/lmr/m/it/10 2. Estrategia de Interceptación en Backend
+ []
+
+
+Underfull \vbox (badness 4752) has occurred while \output is active []
+
+[6]
+Underfull \hbox (badness 2073) in paragraph at lines 63--64
+[]\TU/ptm/bx/it/10 Si el toggle \TU/lmtt/m/n/10 StockV2 \TU/ptm/bx/it/10 está a
+ctivo $\OMS/cmsy/m/n/10 !$ \TU/ptm/bx/it/10 se ejecuta
+ []
+
+(./tables/flujo_toggle_backend.tex
 File: graphics/flujo_toggle_backend.png Graphic file (type bmp)
 <graphics/flujo_toggle_backend.png>
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
+File: graphics/lazy_loading_toggle.png Graphic file (type bmp)
+<graphics/lazy_loading_toggle.png>
+) (./sections/05_resultados.tex [7]
+Underfull \vbox (badness 4492) has occurred while \output is active []
 
-[3]) (./sections/05_resultados.tex [4] (./tables/grafico_tradeOff.tex
+File: graphics/prototipo_funcional.png Graphic file (type bmp)
+<graphics/prototipo_funcional.png>
+[8]
+Underfull \hbox (badness 1824) in paragraph at lines 84--85
+[]\TU/ptm/bx/it/10 Commit, Compilación y ejecución del pipeline
+ []
+
+(./tables/grafico_tradeOff.tex
 Overfull \hbox (40.86766pt too wide) in paragraph at lines 5--16
  [][] 
  []
 
-)) (./sections/06_discusion.tex [5]) (./sections/07_conclusiones.tex) (./sectio
-ns/A1_apendices.tex
+)) (./sections/06_discusion.tex [9]
+File: graphics/deuda_toggles.png Graphic file (type bmp)
+<graphics/deuda_toggles.png>
+[10]) (./sections/07_conclusiones.tex [11]
+Overfull \hbox (0.66977pt too wide) in paragraph at lines 16--17
+ []\TU/lmr/m/it/10 3. El “Impuesto de Complejidad” y la Resiliencia:
+ []
+
+) (./sections/A1_apendices.tex
 ** WARNING: Ignoring useless \section in Appendix (line 2).
-) [6]
+) [12]
 Underfull \hbox (badness 5970) in paragraph at lines 36--36
 []\TU/ptm/bx/it/10 M. Dorcas-Esther, «  Feature Flags and Dyna-
  []
@@ -961,10 +1005,10 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7] (build/main_ieee.aux
-LaTeX Info: Redefining \sptext on input line 30.
-LaTeX Info: Redefining \. on input line 30.
-LaTeX Info: Redefining \% on input line 30.
+[13] (build/main_ieee.aux
+LaTeX Info: Redefining \sptext on input line 14.
+LaTeX Info: Redefining \. on input line 14.
+LaTeX Info: Redefining \% on input line 14.
 )
  ***********
 LaTeX2e <2025-11-01>
@@ -974,18 +1018,18 @@ L3 programming layer <2025-11-14>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main_ieee.out' has not changed.
-(rerunfilecheck)             Checksum: 61AEC19CCB55ABE8E19AC5B831950B7F;7124.
+(rerunfilecheck)             Checksum: 553299D486DDB25598B03C90B77EDFAE;15494.
 Package logreq Info: Writing requests to 'main_ieee.run.xml'.
 \openout1 = `main_ieee.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31800 strings out of 468179
- 675653 string characters out of 5435042
- 1601373 words of memory out of 5000000
- 60166 multiletter control sequences out of 15000+600000
- 632092 words of font info for 98 fonts, out of 8000000 for 9000
+ 31877 strings out of 468179
+ 677881 string characters out of 5435042
+ 1623321 words of memory out of 5000000
+ 60236 multiletter control sequences out of 15000+600000
+ 632100 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 78i,13n,83p,1006b,5631s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 78i,13n,83p,1114b,5631s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main_ieee.xdv (7 pages, 344100 bytes).
+Output written on build/main_ieee.xdv (13 pages, 685608 bytes).

@@ -1,6 +1,26 @@
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
 [htbp]
+    \centering
+    \includegraphics[width=0.85\columnwidth]{graphics/brecha_digital_agro.png}
+    \caption{Ilustración conceptual de la brecha entre la producción agrícola de alta calidad y su limitada visibilidad en el mercado digital, mostrando cómo el Portal Agro-Comercial actúa como un puente tecnológico.}
+    \label{fig:brecha_digital}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{graphics/stack_tecnologico.png}
+    \caption{Diagrama detallado del stack tecnológico y el flujo de despliegue actual (As-Is). Se observa la linealidad del pipeline en Jenkins que obliga al redespliegue total del contenedor en Azure ante cualquier cambio.}
+    \label{fig:stack_tecnologico}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
 \centering
 \includegraphics[width=0.45\textwidth]{graphics/arquitectura_actual.png}
 \caption{Arquitectura actual del Portal Agro-Comercial (Monolito Distribuido).}
@@ -11,6 +31,36 @@
 \begin{figure*}[t]
     \centering
     \includegraphics[width=0.95\textwidth]{graphics/flujo_toggle_backend.png}
-    \caption{Diagrama de flujo propuesto para el backend. El "Toggle Router" intercepta la petici\u00f3n y decide din\u00e1micamente qu\u00e9 versi\u00f3n de la l\u00f3gica ejecutar bas\u00e1ndose en la configuraci\u00f3n externa, desacoplando el despliegue de la activaci\u00f3n.}
+    \caption{Diagrama de flujo propuesto para el backend. El "Toggle Router" intercepta la petición y decide dinámicamente que versión de la logíca ejecutar basandose en la configuración externa, desacoplando el despliegue de la activación.}
     \label{fig:flujo_backend}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{graphics/lazy_loading_toggle.png}
+    \caption{Comparación del proceso de carga de recursos en el frontend. A la izquierda, la carga tradicional descarga todos los módulos JavaScript. A la derecha, la propuesta de carga condicional impulsada por Feature Toggles.}
+    \label{fig:lazy_loading}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{graphics/prototipo_funcional.png}
+    \caption{Interfaz del prototipo funcional desplegado: (a) Perfil detallado del productor, (b) Catálogo de productos con filtrado por vereda y (c) Código QR generado para trazabilidad en empaque.}
+    \label{fig:prototipo}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{graphics/deuda_toggles.png}
+    \caption{Representación del ciclo de vida de un Feature Toggle y el riesgo acumulativo de la deuda técnica. Un toggle no eliminado se convierte en ``código muerto'', aumentando exponencialmente la entropía del sistema.}
+    \label{fig:deuda_toggles}
 \end{figure*}

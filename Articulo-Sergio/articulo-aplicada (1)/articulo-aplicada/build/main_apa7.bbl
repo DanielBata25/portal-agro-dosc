@@ -161,6 +161,46 @@
       \verb https://www.researchgate.net/profile/Dorcas-Esther/publication/391018514_Feature_Flags_and_Dynamic_Configuration_in_Microservices/links/6808366260241d5140151f49/Feature-Flags-and-Dynamic-Configuration-in-Microservices.pdf
       \endverb
     \endentry
+    \entry{dupont2022unifying}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=348928681701676cc9688e28d191bf45}{%
+           family={Dupont},
+           familyi={D\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0d728ee8a6cf3d74ef056389b676747}{%
+           family={Legrand},
+           familyi={L\bibinitperiod},
+           given={Elise},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{fullhash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{fullhashraw}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{bibnamehash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{authorbibnamehash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{authornamehash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{authorfullhash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{authorfullhashraw}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{HAL Science}
+      \field{title}{From feature models to feature toggles in practice}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://inria.hal.science/hal-03788437/file/Unifying_SPL_and_Feature_Flags%282%29.pdf
+      \endverb
+      \verb{url}
+      \verb https://inria.hal.science/hal-03788437/file/Unifying_SPL_and_Feature_Flags%282%29.pdf
+      \endverb
+    \endentry
     \entry{hal2022interaction}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0f3ced09bd42f665807cdd93c4003208}{%
@@ -891,6 +931,46 @@
       \endverb
       \verb{url}
       \verb https://www.researchgate.net/profile/Dorcas-Esther/publication/391018514_Feature_Flags_and_Dynamic_Configuration_in_Microservices/links/6808366260241d5140151f49/Feature-Flags-and-Dynamic-Configuration-in-Microservices.pdf
+      \endverb
+    \endentry
+    \entry{dupont2022unifying}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=348928681701676cc9688e28d191bf45}{%
+           family={Dupont},
+           familyi={D\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0d728ee8a6cf3d74ef056389b676747}{%
+           family={Legrand},
+           familyi={L\bibinitperiod},
+           given={Elise},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{fullhash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{fullhashraw}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{bibnamehash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{authorbibnamehash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{authornamehash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{authorfullhash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{authorfullhashraw}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{HAL Science}
+      \field{title}{From feature models to feature toggles in practice}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://inria.hal.science/hal-03788437/file/Unifying_SPL_and_Feature_Flags%282%29.pdf
+      \endverb
+      \verb{url}
+      \verb https://inria.hal.science/hal-03788437/file/Unifying_SPL_and_Feature_Flags%282%29.pdf
       \endverb
     \endentry
     \entry{hal2022interaction}{article}{}{}

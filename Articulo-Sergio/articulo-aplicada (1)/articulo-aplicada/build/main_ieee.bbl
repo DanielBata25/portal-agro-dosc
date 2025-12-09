@@ -326,6 +326,76 @@
       \verb https://bffrepositorio.unal.edu.co/server/api/core/bitstreams/f3e90162-0ecc-4aac-a871-269f2ab9ab2a/content
       \endverb
     \endentry
+    \entry{li2020capture}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=691da553f9c2d3063c21ec49d709b60b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yuchen},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=92f386b2333cf6bddfa01a270cab627d}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df5399c48d776549546a69945cad961}
+      \strng{fullhash}{9df5399c48d776549546a69945cad961}
+      \strng{fullhashraw}{9df5399c48d776549546a69945cad961}
+      \strng{bibnamehash}{9df5399c48d776549546a69945cad961}
+      \strng{authorbibnamehash}{9df5399c48d776549546a69945cad961}
+      \strng{authornamehash}{9df5399c48d776549546a69945cad961}
+      \strng{authorfullhash}{9df5399c48d776549546a69945cad961}
+      \strng{authorfullhashraw}{9df5399c48d776549546a69945cad961}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Digital Library}
+      \field{title}{Capture the Feature Flag: Detecting Feature Flags in Open-Source}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/pdf/10.1145/3379597.3387463
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/pdf/10.1145/3379597.3387463
+      \endverb
+    \endentry
+    \entry{wang2025tsdetector}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=1f647bb6da8304b7be380ec58eb6373a}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Lei},
+           giveni={L\bibinitperiod}}}%
+        {{hash=35b53a5f450cc6a8ce8bce633606e1de}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{002088110273f46f68d3b0395a578ade}
+      \strng{fullhash}{002088110273f46f68d3b0395a578ade}
+      \strng{fullhashraw}{002088110273f46f68d3b0395a578ade}
+      \strng{bibnamehash}{002088110273f46f68d3b0395a578ade}
+      \strng{authorbibnamehash}{002088110273f46f68d3b0395a578ade}
+      \strng{authornamehash}{002088110273f46f68d3b0395a578ade}
+      \strng{authorfullhash}{002088110273f46f68d3b0395a578ade}
+      \strng{authorfullhashraw}{002088110273f46f68d3b0395a578ade}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv}
+      \field{title}{TS-Detector: Detecting Feature Toggle Usage Patterns}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2505.05326
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2505.05326
+      \endverb
+    \endentry
     \entry{sridharan2020piranha}{article}{}{}
       \name{author}{2}{}{%
         {{hash=dfe638eab9b72301e5e8597133f131b0}{%
@@ -491,71 +561,6 @@
       \verb https://hal.science/hal-03527250/document
       \endverb
     \endentry
-    \entry{chen2025horizon}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=8b8805250fb5a57cfbae360547a18706}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Qiang},
-           giveni={Q\bibinitperiod}}}%
-        {{hash=2a72f304d2bc33c9c92301f2dc3063b2}{%
-           family={Zhou},
-           familyi={Z\bibinitperiod},
-           given={Ming},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{a3a91635aae669364f9185fedaadf599}
-      \strng{fullhash}{a3a91635aae669364f9185fedaadf599}
-      \strng{fullhashraw}{a3a91635aae669364f9185fedaadf599}
-      \strng{bibnamehash}{a3a91635aae669364f9185fedaadf599}
-      \strng{authorbibnamehash}{a3a91635aae669364f9185fedaadf599}
-      \strng{authornamehash}{a3a91635aae669364f9185fedaadf599}
-      \strng{authorfullhash}{a3a91635aae669364f9185fedaadf599}
-      \strng{authorfullhashraw}{a3a91635aae669364f9185fedaadf599}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv}
-      \field{title}{HORIZON: A Classification and Comparison Framework for Pricing-driven Feature Toggling}
-      \field{year}{2025}
-      \verb{urlraw}
-      \verb https://arxiv.org/pdf/2503.21448
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/pdf/2503.21448
-      \endverb
-    \endentry
-    \entry{ajmeri2022heuristics}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=16709f93fad1aaa53191a056c7a0354a}{%
-           family={Ajmeri},
-           familyi={A\bibinitperiod},
-           given={Nirav},
-           giveni={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{16709f93fad1aaa53191a056c7a0354a}
-      \strng{fullhash}{16709f93fad1aaa53191a056c7a0354a}
-      \strng{fullhashraw}{16709f93fad1aaa53191a056c7a0354a}
-      \strng{bibnamehash}{16709f93fad1aaa53191a056c7a0354a}
-      \strng{authorbibnamehash}{16709f93fad1aaa53191a056c7a0354a}
-      \strng{authornamehash}{16709f93fad1aaa53191a056c7a0354a}
-      \strng{authorfullhash}{16709f93fad1aaa53191a056c7a0354a}
-      \strng{authorfullhashraw}{16709f93fad1aaa53191a056c7a0354a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IST}
-      \field{title}{Feature toggles as code: Heuristics and metrics for structuring feature toggles}
-      \field{year}{2022}
-      \verb{urlraw}
-      \verb https://niravajmeri.github.io/docs/IST22-FeatureToggles.pdf
-      \endverb
-      \verb{url}
-      \verb https://niravajmeri.github.io/docs/IST22-FeatureToggles.pdf
-      \endverb
-    \endentry
     \entry{torres2020differences}{article}{}{}
       \name{author}{2}{}{%
         {{hash=b5b2090a9776d8b5030b340846a03221}{%
@@ -591,74 +596,104 @@
       \verb https://dl.acm.org/doi/pdf/10.1145/3377813.3381366
       \endverb
     \endentry
-    \entry{li2020capture}{article}{}{}
+    \entry{dupont2022unifying}{article}{}{}
       \name{author}{2}{}{%
-        {{hash=691da553f9c2d3063c21ec49d709b60b}{%
-           family={Li},
+        {{hash=348928681701676cc9688e28d191bf45}{%
+           family={Dupont},
+           familyi={D\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e0d728ee8a6cf3d74ef056389b676747}{%
+           family={Legrand},
            familyi={L\bibinitperiod},
-           given={Yuchen},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=92f386b2333cf6bddfa01a270cab627d}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Hui},
-           giveni={H\bibinitperiod}}}%
+           given={Elise},
+           giveni={E\bibinitperiod}}}%
       }
-      \strng{namehash}{9df5399c48d776549546a69945cad961}
-      \strng{fullhash}{9df5399c48d776549546a69945cad961}
-      \strng{fullhashraw}{9df5399c48d776549546a69945cad961}
-      \strng{bibnamehash}{9df5399c48d776549546a69945cad961}
-      \strng{authorbibnamehash}{9df5399c48d776549546a69945cad961}
-      \strng{authornamehash}{9df5399c48d776549546a69945cad961}
-      \strng{authorfullhash}{9df5399c48d776549546a69945cad961}
-      \strng{authorfullhashraw}{9df5399c48d776549546a69945cad961}
+      \strng{namehash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{fullhash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{fullhashraw}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{bibnamehash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{authorbibnamehash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{authornamehash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{authorfullhash}{5b9a60b9829a7f61418c95b8f8a61bc4}
+      \strng{authorfullhashraw}{5b9a60b9829a7f61418c95b8f8a61bc4}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{ACM Digital Library}
-      \field{title}{Capture the Feature Flag: Detecting Feature Flags in Open-Source}
-      \field{year}{2020}
+      \field{journaltitle}{HAL Science}
+      \field{title}{From feature models to feature toggles in practice}
+      \field{year}{2022}
       \verb{urlraw}
-      \verb https://dl.acm.org/doi/pdf/10.1145/3379597.3387463
+      \verb https://inria.hal.science/hal-03788437/file/Unifying_SPL_and_Feature_Flags%282%29.pdf
       \endverb
       \verb{url}
-      \verb https://dl.acm.org/doi/pdf/10.1145/3379597.3387463
+      \verb https://inria.hal.science/hal-03788437/file/Unifying_SPL_and_Feature_Flags%282%29.pdf
       \endverb
     \endentry
-    \entry{wang2025tsdetector}{article}{}{}
+    \entry{chen2025horizon}{article}{}{}
       \name{author}{2}{}{%
-        {{hash=1f647bb6da8304b7be380ec58eb6373a}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Lei},
-           giveni={L\bibinitperiod}}}%
-        {{hash=35b53a5f450cc6a8ce8bce633606e1de}{%
+        {{hash=8b8805250fb5a57cfbae360547a18706}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=2a72f304d2bc33c9c92301f2dc3063b2}{%
            family={Zhou},
            familyi={Z\bibinitperiod},
-           given={Xin},
-           giveni={X\bibinitperiod}}}%
+           given={Ming},
+           giveni={M\bibinitperiod}}}%
       }
-      \strng{namehash}{002088110273f46f68d3b0395a578ade}
-      \strng{fullhash}{002088110273f46f68d3b0395a578ade}
-      \strng{fullhashraw}{002088110273f46f68d3b0395a578ade}
-      \strng{bibnamehash}{002088110273f46f68d3b0395a578ade}
-      \strng{authorbibnamehash}{002088110273f46f68d3b0395a578ade}
-      \strng{authornamehash}{002088110273f46f68d3b0395a578ade}
-      \strng{authorfullhash}{002088110273f46f68d3b0395a578ade}
-      \strng{authorfullhashraw}{002088110273f46f68d3b0395a578ade}
+      \strng{namehash}{a3a91635aae669364f9185fedaadf599}
+      \strng{fullhash}{a3a91635aae669364f9185fedaadf599}
+      \strng{fullhashraw}{a3a91635aae669364f9185fedaadf599}
+      \strng{bibnamehash}{a3a91635aae669364f9185fedaadf599}
+      \strng{authorbibnamehash}{a3a91635aae669364f9185fedaadf599}
+      \strng{authornamehash}{a3a91635aae669364f9185fedaadf599}
+      \strng{authorfullhash}{a3a91635aae669364f9185fedaadf599}
+      \strng{authorfullhashraw}{a3a91635aae669364f9185fedaadf599}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv}
-      \field{title}{TS-Detector: Detecting Feature Toggle Usage Patterns}
+      \field{title}{HORIZON: A Classification and Comparison Framework for Pricing-driven Feature Toggling}
       \field{year}{2025}
       \verb{urlraw}
-      \verb https://arxiv.org/pdf/2505.05326
+      \verb https://arxiv.org/pdf/2503.21448
       \endverb
       \verb{url}
-      \verb https://arxiv.org/pdf/2505.05326
+      \verb https://arxiv.org/pdf/2503.21448
+      \endverb
+    \endentry
+    \entry{ajmeri2022heuristics}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=16709f93fad1aaa53191a056c7a0354a}{%
+           family={Ajmeri},
+           familyi={A\bibinitperiod},
+           given={Nirav},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{16709f93fad1aaa53191a056c7a0354a}
+      \strng{fullhash}{16709f93fad1aaa53191a056c7a0354a}
+      \strng{fullhashraw}{16709f93fad1aaa53191a056c7a0354a}
+      \strng{bibnamehash}{16709f93fad1aaa53191a056c7a0354a}
+      \strng{authorbibnamehash}{16709f93fad1aaa53191a056c7a0354a}
+      \strng{authornamehash}{16709f93fad1aaa53191a056c7a0354a}
+      \strng{authorfullhash}{16709f93fad1aaa53191a056c7a0354a}
+      \strng{authorfullhashraw}{16709f93fad1aaa53191a056c7a0354a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IST}
+      \field{title}{Feature toggles as code: Heuristics and metrics for structuring feature toggles}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://niravajmeri.github.io/docs/IST22-FeatureToggles.pdf
+      \endverb
+      \verb{url}
+      \verb https://niravajmeri.github.io/docs/IST22-FeatureToggles.pdf
       \endverb
     \endentry
   \enddatalist

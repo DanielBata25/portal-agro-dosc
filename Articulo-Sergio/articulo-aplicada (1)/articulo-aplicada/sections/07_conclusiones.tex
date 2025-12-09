@@ -1,21 +1,43 @@
 \section{Conclusiones y Trabajo Futuro}
 
-Al bajar el telón de esta fase del Portal Agro-Comercial, nos llevamos dos certezas muy claras: una social y otra estrictamente ingenieril.
+El desarrollo del Portal Agro-Comercial del Huila y la subsiguiente formulación de su arquitectura evolutiva representan el cierre de un ciclo de investigación aplicada que ha permitido cristalizar certezas fundamentales. Este estudio trasciende la mera entrega de un producto de software funcional; se constituye como una validación empírica de cómo la ingeniería de software moderna debe adaptarse a las restricciones y realidades de los entornos rurales en economías emergentes.
 
-Por un lado, probamos en carne propia que la tecnología web moderna sí tiene cabida en el campo. Lo que vimos en Teruel no fue solo un ejercicio académico; demostramos que herramientas como la identidad digital y los códigos QR son palancas reales para eliminar intermediarios. El campesino no necesita ser ingeniero de sistemas para vender, solo necesita herramientas que no le estorben.
+Al contrastar la realidad operativa del campo en el municipio de Teruel con la frontera del conocimiento en despliegue continuo y arquitectura de software, derivamos un cuerpo de conclusiones que sintetiza el aporte académico y social de este trabajo.
 
-Por otro lado, la lección técnica fue tajante: para que iniciativas como esta sobrevivan, no pueden seguir dependiendo de despliegues monolíticos ``a la antigua''. Nuestra investigación confirma que adoptar una arquitectura de \textit{Feature Toggles} no es un lujo, sino el paso evolutivo obligatorio. Como bien dicen \cite{meyer2016continuous}, en un sistema vivo, la entrega continua no es negociable. Al separar el acto técnico de instalar código del acto comercial de activarlo, le garantizamos al usuario rural la estabilidad que necesita. No podemos permitirnos el riesgo de ``romper'' la plataforma con cada actualización.
+\subsection{Síntesis de Hallazgos y Conclusiones}
 
-Somos conscientes del precio a pagar. Alineados con \cite{sharma2024complexity}, sabemos que esta decisión complica el código. Pero seamos realistas: en un contexto donde el soporte técnico en sitio es escaso o nulo, ese costo se paga con gusto a cambio de ganar resiliencia y capacidad de reacción remota.
+\subsubsection{La Soberanía Digital como Motor de Competitividad}
+En primera instancia, la investigación valida la \textbf{hipótesis sociotécnica}. La experiencia de campo demuestra que la tecnología web moderna no es ajena a la realidad rural; por el contrario, actúa como el habilitador necesario para romper la asimetría de información que históricamente ha desfavorecido al productor primario. Funcionalidades que en el papel parecían distantes para el contexto local, como la identidad digital y la trazabilidad mediante códigos QR, probaron ser herramientas pragmáticas para la desintermediación comercial. La conclusión es contundente: la barrera de adopción tecnológica no radica en la capacidad cognitiva del agricultor, sino en la empatía del diseño de la herramienta. Cuando el software se integra intuitivamente en el flujo de trabajo diario —como se logró con la interfaz SPA en Angular optimizada para redes 3G—, el productor adopta la tecnología no por novedad, sino por utilidad comercial tangible.
 
-\subsection{Lo que sigue (Trabajo Futuro)}
+\subsubsection{Obsolescencia del Despliegue Monolítico}
+Desde la perspectiva ingenieril, la lección aprendida es tajante: en entornos donde la confianza del usuario es un activo frágil, los modelos de despliegue que requieren tiempo de inactividad son insostenibles. Nuestra investigación confirma que la arquitectura monolítica actual, aunque fue instrumental para alcanzar la etapa de Producto Mínimo Viable (MVP), se ha convertido en un callejón sin salida para el escalamiento regional. La adopción de \textit{Feature Toggles} deja de ser una opción estilística para convertirse en un mandato de supervivencia operativa. Como postulan \cite{meyer2016continuous}, en un sistema vivo la entrega continua no es negociable. La separación técnica entre la instalación del código (\textit{deployment}) y su activación comercial (\textit{release}) es el único mecanismo arquitectónico que garantiza la estabilidad necesaria para que un portal de comercio electrónico opere 24/7 sin interrupciones por mantenimiento, protegiendo así la reputación del servicio.
 
-No nos quedaremos en el papel. La hoja de ruta para que el Portal crezca tiene tres paradas obligatorias:
+\subsubsection{El ``Impuesto de Complejidad'' y la Resiliencia}
+Finalmente, asumimos con transparencia el compromiso de ingeniería (\textit{trade-off}) identificado. En alineación con las métricas presentadas por \cite{sharma2024complexity}, reconocemos que la inyección de lógica condicional incrementa la complejidad ciclomática del sistema y la carga cognitiva de los desarrolladores. El código se vuelve más denso, menos lineal y exige una mayor disciplina de pruebas. No obstante, se concluye que este ``impuesto de complejidad'' se paga con gusto. En un contexto rural donde el soporte técnico en sitio es escaso o nulo, la capacidad de reacción remota —desactivar un módulo fallido en segundos sin necesidad de un \textit{redeploy} completo— justifica plenamente la inversión. Hemos intercambiado la simplicidad estructural del código por la tranquilidad operativa del negocio.
 
+\subsection{Limitaciones del Estudio}
+
+Es imperativo reconocer las fronteras de esta investigación para contextualizar sus alcances:
 \begin{enumerate}
-    \item \textbf{Prueba de Fuego en Producción:} Una cosa es que la arquitectura aguante en el papel y otra muy distinta es que sobreviva al tráfico real. No nos interesa la perfección teórica; nos interesa que funcione. El siguiente paso es inyectar el patrón \textit{Decorator} en .NET y la carga diferida en Angular para medir, sin filtros, si el sistema mantiene la velocidad bajo estrés operativo.
-
-    \item \textbf{Automatización contra el Olvido:} Hay que asumir una verdad incómoda: si dejamos la limpieza a la memoria del desarrollador, vamos a fallar. Para que el portal no termine siendo un basurero de código muerto, seremos radicales. Usaremos scripts de análisis estático inspirados en Piranha \cite{sridharan2020piranha} para que el mismo sistema nos obligue a eliminar las banderas caducas. O se automatiza, o la deuda técnica nos come.
-
-    \item \textbf{Estrategia de Mercado en el Código:} Más allá de la ingeniería, queremos que los toggles muevan el negocio. La meta es usar marcos como HORIZON \cite{chen2025horizon} para segmentar usuarios desde el núcleo. La visión es simple: que el mismo código se adapte solo, ofreciendo herramientas pro a las cooperativas grandes sin obligarnos a mantener múltiples versiones del software.
+    \item \textbf{Alcance Geográfico:} La validación de usuario se limitó al municipio de Teruel. Aunque los patrones arquitectónicos son universales, factores culturales de otros municipios podrían influir en la adopción de las interfaces dinámicas.
+    \item \textbf{Entorno de Pruebas:} Las métricas de desempeño de los toggles se obtuvieron mediante simulaciones de carga y entornos de \textit{Staging}. Aún no se dispone de datos longitudinales sobre el comportamiento de la base de datos de configuración tras un año de operación continua con miles de registros históricos.
+    \item \textbf{Seguridad del Cliente:} Como se discutió, la exposición de banderas en el frontend sigue siendo un vector de riesgo que requiere auditorías de seguridad más profundas, más allá del alcance de este prototipo.
 \end{enumerate}
+
+\subsection{Trabajo Futuro: Hoja de Ruta Tecnológica}
+
+El cierre de esta fase no marca el fin del proyecto, sino el inicio de su maduración hacia un producto de software industrializable. Para trascender la propuesta teórica y materializar la arquitectura evolutiva, se define una hoja de ruta técnica (\textit{Roadmap}) a ejecutar en tres horizontes temporales bien definidos.
+
+\subsubsection{Corto Plazo: Validación de Desempeño y Caos (Performance)}
+La prioridad inmediata es someter la arquitectura propuesta a estrés real mediante prácticas de Ingeniería del Caos. No basta con la validación teórica; se requieren métricas empíricas de robustez.
+\begin{itemize}
+    \item \textbf{Implementación Física:} Inyección del patrón \textit{Decorator} en el backend .NET y habilitación de la carga diferida en Angular.
+    \item \textbf{Pruebas de Carga:} Ejecución de escenarios con JMeter simulando 500 usuarios concurrentes evaluando toggles simultáneamente, para medir la latencia de la base de datos SQL Server.
+    \item \textbf{Validación de Caché:} Confirmar que la sobrecarga (\textit{overhead}) de la consulta de configuración sea inferior a 5 ms, validando la eficacia de la estrategia de caché L1/L2 (Memoria/Redis).
+\end{itemize}
+
+\subsubsection{Mediano Plazo: Automatización de la Higiene del Código}
+Para evitar que el portal colapse bajo su propio peso estructural debido a la acumulación de banderas obsoletas, se implementará una política de ``cero tolerancia'' a la deuda técnica. Inspirados en la herramienta Piranha de Uber analizada por \cite{sridharan2020piranha}, se desarrollarán scripts de análisis estático (Roslyn Analyzers para .NET) integrados al pipeline de Jenkins. Estos tendrán la autoridad de bloquear un \textit{Pull Request} si se detecta que un toggle marcado como expirado no ha sido eliminado del código fuente. Como advierten \cite{abdalkareem2021removal}, la automatización es la única defensa efectiva contra la inercia humana: o el sistema obliga a limpiar, o la entropía gana la batalla.
+
+\subsubsection{Largo Plazo: Segmentación Comercial y Modelo SaaS}
+Finalmente, se proyecta que los toggles evolucionen de ser meras herramientas técnicas a convertirse en motores de negocio. A partir del marco de clasificación HORIZON propuesto recientemente por \cite{chen2025horizon}, se planifica segmentar la base de usuarios desde el núcleo del software. La visión estratégica es permitir que el mismo código base ofrezca funcionalidades diferenciadas (Multi-Tenancy) para distintos actores. Por ejemplo, ofrecer módulos de ``Analítica de Precios Avanzada'' y ``Predicción de Cosechas'' exclusivamente para cooperativas de gran escala, mientras se mantiene una interfaz simplificada para pequeños productores independientes. Esto alinea el proyecto con la visión de \cite{dupont2022unifying}, transformando el portal en una Línea de Productos de Software (SPL) capaz de adaptarse a múltiples municipios y modelos de negocio sin la necesidad de bifurcar el código en múltiples repositorios inmanejables.
