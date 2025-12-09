@@ -1,0 +1,88 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+\centering
+\small
+\begin{tabular}{|p{2.8cm}|p{3.5cm}|p{3.5cm}|}
+\hline
+\textbf{Tipo} & \textbf{Origen} & \textbf{Impacto en el Portal} \\
+\hline
+\textbf{Intencional y Prudente} & Solución rápida con intención de arreglar después. & Se eligió SQL Server antes que NoSQL, permitiendo migración futura. \\
+\hline
+\textbf{Intencional e Imprudente} & Trabajo con prisa, saltándose procesos clave. & Evitado estableciendo TDD obligatorio desde el inicio. \\
+\hline
+\textbf{No Intencional y Prudente} & Aprendizaje del equipo o evolución de requisitos. & Refactorización del módulo Pedidos tras aprender mejor diseño. \\
+\hline
+\textbf{No Intencional e Imprudente} & Desconocimiento de patrones o falta de herramientas. & Mitigado con SonarQube para detectar code smells automáticamente. \\
+\hline
+\end{tabular}
+\caption{Tipología de la Deuda Técnica y su Aplicación en el Portal}
+\end{table*}
+\efloatseparator
+ 
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+\centering
+\small
+\begin{tabular}{|p{2.2cm}|p{3.5cm}|p{4cm}|}
+\hline
+\textbf{Principio} & \textbf{Descripción} & \textbf{Aplicación en el Portal} \\
+\hline
+\textbf{SRP} & Cada clase hace una sola cosa. & Separa validación de stock de guardado de datos. \\
+\hline
+\textbf{OCP} & Se extiende sin modificar. & Nuevos tipos de productor sin tocar Pedidos (RF-004). \\
+\hline
+\textbf{LSP} & Herencia no rompe el sistema. & UsuarioProductor y UsuarioConsumidor heredan de UsuarioBase. \\
+\hline
+\textbf{ISP} & Interfaces específicas vs grandes. & IUserService separado en IUserQueryService e IUserCommandService. \\
+\hline
+\textbf{DIP} & Depende de abstracciones. & Inyección de Dependencias conecta Pedidos con Notificaciones. \\
+\hline
+\end{tabular}
+\caption{Principios SOLID y su Implementación en el Portal}
+\end{table*}
+\efloatseparator
+ 
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+\centering
+\small
+\begin{tabular}{|p{3cm}|c|p{4.5cm}|}
+\hline
+\textbf{Lo que hicimos (Variable)} & \textbf{¿Qué tan importante es? (Peso OR)} & \textbf{¿Cómo lo aplicamos en el Portal?} \\
+\hline
+Cobertura de Pruebas & 4.2 (CRÍTICO) & Obsesión por el 80\% con TDD, protegiendo el flujo de Pedidos. \\
+\hline
+Experiencia del Equipo & 3.8 (ALTO) & Inversión en capacitación constante en C\#/.NET y Angular. \\
+\hline
+Complejidad del Dominio & 2.5 (MEDIO) & Usamos la Arquitectura Modular para separar Pedidos, Fincas y Productos. \\
+\hline
+Gasto del Proyecto & 1.1-1.3 (BAJO) & No dependimos del dinero, sino del esfuerzo técnico riguroso. \\
+\hline
+\end{tabular}
+\caption{Factores Predictivos de Éxito en Proyectos de Refactorización}
+\end{table*}
+\efloatseparator
+ 
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+\centering
+\small
+\begin{tabular}{|p{2.8cm}|p{4cm}|}
+\hline
+\textbf{Estrategia} & \textbf{Caracteristicas} \\
+\hline
+\textbf{Refactorizacion Incremental} & \textit{Ventajas:} Riesgo bajo, conocimiento intacto, funcionalidad estable. \\
+\cline{2-2}
+ & \textit{Desventajas:} Mas tiempo si hay legacy real. \\
+\hline
+\textbf{Reescritura Completa} & \textit{Ventajas:} Tecnologias limpias desde inicio. \\
+\cline{2-2}
+ & \textit{Desventajas:} Riesgo extremo sin equipo experto. \\
+\hline
+\end{tabular}
+\caption{Comparacion de Estrategias de Modernizacion}
+\end{table*}

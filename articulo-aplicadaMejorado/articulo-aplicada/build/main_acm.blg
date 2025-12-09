@@ -1,0 +1,96 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main_acm.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: bibliography/references.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Warning--no key, author in ia2025
+Warning--no author, editor, organization, or key in ia2025
+Warning--to sort, need author or key in ia2025
+Warning--no key, author in fusion2020
+Warning--no author, editor, organization, or key in fusion2020
+Warning--to sort, need author or key in fusion2020
+Warning--no key, author, or editor in adyen2021
+Warning--no author, editor, organization, or key in adyen2021
+Warning--to sort, need author, editor, or key in adyen2021
+Warning--no key, author in ciclos2024
+Warning--no author, editor, organization, or key in ciclos2024
+Warning--to sort, need author or key in ciclos2024
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Warning--no key, author, or editor in adyen2021
+Warning--no key, author, or editor in adyen2021
+Warning--no key, author in ciclos2024
+Warning--no key, author in ciclos2024
+Warning--no key, author in fusion2020
+Warning--no key, author in fusion2020
+Warning--no key, author in ia2025
+Warning--no key, author in ia2025
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--no key, author in fusion2020
+Warning--empty author in fusion2020
+Warning--empty publisher in fusion2020
+Warning--empty address in fusion2020
+Warning--page numbers missing in both pages and numpages fields in fusion2020
+Warning--no key, author, or editor in adyen2021
+Warning--neither author and editor supplied for adyen2021
+Warning--no journal in adyen2021
+Warning--no number and no volume in adyen2021
+Warning--page numbers missing in both pages and numpages fields in adyen2021
+Warning--no key, author in ciclos2024
+Warning--empty author in ciclos2024
+Warning--empty publisher in ciclos2024
+Warning--empty address in ciclos2024
+Warning--page numbers missing in both pages and numpages fields in ciclos2024
+Warning--no key, author in ia2025
+Warning--empty author in ia2025
+Warning--empty publisher in ia2025
+Warning--empty address in ia2025
+Warning--page numbers missing in both pages and numpages fields in ia2025
+You've used 4 entries,
+            6273 wiz_defined-function locations,
+            1535 strings with 18831 characters,
+and the built_in function-call counts, 3435 in all, are:
+= -- 260
+> -- 0
+< -- 0
++ -- 4
+- -- 0
+* -- 218
+:= -- 176
+add.period$ -- 13
+call.type$ -- 4
+change.case$ -- 16
+chr.to.int$ -- 4
+cite$ -- 60
+duplicate$ -- 445
+empty$ -- 329
+format.name$ -- 0
+if$ -- 857
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 19
+newline$ -- 84
+num.names$ -- 0
+pop$ -- 285
+preamble$ -- 1
+purify$ -- 48
+quote$ -- 0
+skip$ -- 132
+stack$ -- 0
+substring$ -- 194
+swap$ -- 18
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 106
+warning$ -- 40
+while$ -- 0
+width$ -- 0
+write$ -- 119
+(There were 40 warnings)

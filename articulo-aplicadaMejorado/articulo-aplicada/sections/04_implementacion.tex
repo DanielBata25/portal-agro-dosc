@@ -1,0 +1,89 @@
+\section{Implementación Práctica y Casos de Estudio}
+
+Esta es la prueba de fuego. En esta sección mostramos cómo aplicamos todas las ideas de refactorización y diseño que discutimos, usando como campo de batalla nuestro proyecto: el Portal Agro-comercial del Huila. En lugar de hablar de teorías, presentamos las decisiones que tomamos, las herramientas que usamos y cómo resolvimos los problemas técnicos del día a día.
+
+\subsection{Arquitecturas Modulares y Escalables: Los Cimientos Técnicos}
+
+Para que el sistema crezca sin romperse, lo primero y más importante fue la modularidad. Nuestra regla de oro fue clara: dejamos de lado el "monolito" (esa mole de código que se cae si la miras feo). Decidimos ir por un esquema de separación de responsabilidades basado en la Arquitectura de N Capas.
+
+\paragraph{El Corazón del Sistema (Backend: C\# ASP.NET Core)}
+
+Para la base de todo el Portal (lo que no se ve), usamos C\# ASP.NET Core 8.0 para que se comunicara con el frontend. Lo elegimos porque es muy rápido y aguanta lo que sea \cite{adyen2021}:
+
+\begin{itemize}
+\item \textbf{Organización por Módulos:} Desde el comienzo, el código va en "cajones" funcionales separados. Hay un módulo para la Seguridad (login y permisos, RF-001), otro para la Gestión de Fincas y Productos, y uno más para los Pedidos y Notificaciones.
+
+\item \textbf{Patrón para la Base de Datos:} Usamos un truco en C\# (el Patrón Repositorio) precisamente para que el código que hace las cuentas (el negocio) no dependa de SQL Server. Así, si mañana cambiamos la base de datos (a MongoDB o algo así), el código de las reglas de negocio no tiene que cambiar, solo la capa de conexión.
+
+\item \textbf{La Puerta Única (en Azure):} Montamos el API Gateway en Azure como un único filtro de entrada. Por eso, tenemos el control absoluto de lo que entra y, sobre todo, de quién entra (seguridad).
+\end{itemize}
+
+\paragraph{La Cara del Usuario (Frontend: Angular 17)}
+
+Por el lado del usuario, la parte visual (hecha con Angular) tiene una regla clara: solo habla con esa Puerta Única, punto.
+
+\begin{itemize}
+\item \textbf{Que se vea bien en todo lado:} Además, hicimos que el diseño se adaptara (se dice responsivo) para que se vea perfecto en el celular del productor o en el computador del comprador, cumpliendo el requisito RNF-002.
+\end{itemize}
+
+\subsection{Integración de Calidad Continua (DevSecOps)}
+
+No se puede tener un software funcional si la calidad no está integrada desde el inicio. Por eso, aplicamos el sistema de trabajo DevSecOps (que mete calidad y seguridad en todo momento) usando herramientas que conocemos \cite{ia2025}.
+
+\paragraph{El Control de Calidad y el Despliegue Automático}
+
+Montamos todo el código en GitHub. Y además, lo conectamos con GitHub Actions para que se publicara solo (despliegue automático).
+
+\begin{itemize}
+\item \textbf{El Control Automático:} Si alguien subía código a la rama develop, el sistema lo agarraba en seco. En primer lugar, le corría todas las pruebas (buscando que al menos el 80\% de cobertura se cumpliera) y, luego, analizaba si el código estaba muy enredado. Así garantizamos que lo nuevo no dañe lo que ya funciona en las versiones de prueba y la versión final.
+
+\item \textbf{Prácticas de Codificación Segura:} Fuimos estrictos con la validación de entrada en el backend para evitar inyección SQL. Las contraseñas se manejan con hashing y salting estándar de la industria, como se debe.
+\end{itemize}
+
+\subsection{Patrones Arquitectónicos Avanzados Aplicados}
+
+Nuestra arquitectura no es solo para hoy, está diseñada para que aguante el crecimiento \cite{ciclos2024}.
+
+\paragraph{Arquitectura Orientada a Eventos (EDA) en Notificaciones:} El truco con Notificaciones y el Chat de Pedidos es que usan la idea de EDA. Cuando un productor acepta un pedido, esto genera un aviso (la notificación y la apertura del chat, RF-009) que se propaga a otros módulos sin estar pegados directamente.
+
+\paragraph{Estrategia de Base de Datos para el Futuro:} Aunque estamos con SQL Server, el truco del Repositorio nos dejó listos. De esa forma, si el portal crece mucho, podemos meter bases de datos más rápidas para ciertas cosas (como Redis para guardar datos temporales) sin tener que borrar y rehacer el backend.
+
+\subsection{Casos de Implementación Detallados: Aplicando la Modularidad}
+
+Para que vean que el diseño funciona, mostramos cómo armamos dos procesos clave:
+
+\paragraph{Caso 1: Flujo Completo de Pedido (RF-004)}
+
+Este proceso es el centro de todo el negocio y muestra la separación de tareas funcionando:
+
+\begin{enumerate}
+\item \textbf{Paso 1:} El consumidor pide algo desde la parte visual (Angular). Esa solicitud entra por la Puerta Única.
+
+\item \textbf{Paso 2:} El backend (C\#) revisa si hay suficiente producto (crítico) y lo guarda en SQL Server todo de una (transacción) para que no haya errores.
+
+\item \textbf{Paso 3:} Inmediatamente, el módulo de Pedidos le avisa al módulo de Notificaciones. Es como un chisme que se pasa.
+
+\item \textbf{Paso 4:} Con eso, se prende el Chat de Pedidos (RF-009), abriendo el canal de comunicación.
+\end{enumerate}
+
+\paragraph{Caso 2: Gestión de Archivos (Imágenes y QR)}
+
+Para las imágenes de productos y la generación de códigos QR (RF-012), fuimos estrictos y separamos el trabajo:
+
+\begin{itemize}
+\item \textbf{Guardado Afuera:} Para que la base de datos no se llene, las imágenes no se guardan en SQL Server. Solo se almacena el enlace.
+
+\item \textbf{Proceso Seguro:} El backend recibe el archivo, lo sube a un sitio de guardado fuera del sistema (como si fuera Azure Blob Storage) y solo si eso sale bien, registra el producto y el enlace en la base de datos. Si la base de datos da error, el archivo subido se deja por fuera y se borra.
+\end{itemize}
+
+\subsection{Hoja de Ruta Final}
+
+El proyecto siguió un camino lógico, dividido en etapas claras, y así lo terminamos:
+
+\paragraph{Montar los Cimientos:} Primero que todo, armamos el equipo, definimos Scrum, creamos el código en GitHub y dejamos lista la infraestructura básica para publicar.
+
+\paragraph{El Núcleo Funcional:} Nos enfocamos en lo vital: la Gestión de Pedidos, Productos y Fincas, probando en cada paso que la arquitectura modular funcionara sin problemas.
+
+\paragraph{Pulir y Optimizar:} Nos dedicamos a sacarle brillo, es decir, a afinar el rendimiento (que no se pusiera lento) y mejorar la experiencia del usuario.
+
+\paragraph{Mirando al Futuro:} El diseño que tenemos hoy está listo para lo que venga: podemos meter funciones de IA/ML o crecer a otros departamentos, sin tener que tumbar nada. Esto es gracias a que el diseño es desacoplado.

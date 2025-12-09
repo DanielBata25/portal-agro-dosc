@@ -1,0 +1,68 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{graphics/pipeline_devsecops.png}
+    \caption{Arquitectura completa del Pipeline DevSecOps y CI/CD}
+    \label{fig:pipeline-devsecops-png}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+    \centering
+    \includegraphics[width=0.48\textwidth]{graphics/pipeline_devsecops.pdf}
+    \caption{Pipeline DevSecOps implementado en el Portal Agro-comercial del Huila}
+    \label{fig:pipeline_devsecops}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+\centering
+\includegraphics[width=0.45\textwidth]{graphics/evolucion_metricas_compacta}
+\caption{Evolución de métricas de calidad a lo largo del desarrollo del Portal}
+\label{fig:evolucion-metricas}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+\centering
+\includegraphics[width=0.45\textwidth]{graphics/metricas_dora_compacta}
+\caption{Métricas DORA: Lead Time, MTTR y Frecuencia de Despliegue}
+\label{fig:metricas-dora}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+\centering
+\includegraphics[width=0.45\textwidth]{graphics/roi_beneficios_compacto}
+\caption{Análisis de ROI: Beneficios vs Costos de la Modernización}
+\label{fig:roi-beneficios}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{graphics/comparacion_arquitecturas_circular}
+    \caption{Comparación de estrategias de modernización: Refactorización vs Reescritura}
+    \label{fig:comparacion_arquitecturas}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{graphics/roi_beneficios_compacto}
+    \caption{ROI y beneficios proyectados del Portal Agro-comercial del Huila}
+    \label{fig:roi_beneficios}
+\end{figure*}

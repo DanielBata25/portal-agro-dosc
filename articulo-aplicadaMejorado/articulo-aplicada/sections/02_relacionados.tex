@@ -1,0 +1,173 @@
+\section{Marco Teórico y Trabajos Relacionados}
+
+Veamos un poco el panorama de la industria. El código que arrastra las empresas es un gran estorbo. Los estudios de la literatura de ingeniería de software demuestran que, en sistemas heredados (legacy), los equipos pueden gastar hasta un 60\% de su tiempo solo en corregir fallos y mantener la infraestructura, mientras que en arquitecturas modernas y bien diseñadas, ese consumo se reduce a cerca del 20\%. Esta diferencia brutal es lo que define la Deuda Técnica: una solución rápida que se tomó en el pasado y que hoy se está cobrando con creces en tiempo y complejidad. Si esta deuda no se atiende, el software se vuelve rígido, frágil y costoso de evolucionar, un riesgo que cualquier plataforma regional debe evitar.
+
+\subsection{Deuda Técnica: Concepto, Tipos y Costo Operacional}
+
+La deuda técnica no es solo código feo. Es una analogía de costo-beneficio donde se toma un "préstamo" de tiempo, sacrificando la calidad del diseño para acelerar la entrega. Este préstamo tiene intereses (el tiempo extra que se gasta después en arreglar lo mal diseñado).
+
+\paragraph{Manifestación y Tipología de la Deuda}
+
+La literatura especializada, como los trabajos de Martin Fowler, clasifica la deuda para entender su origen, lo cual es vital para el Portal Agro-comercial del Huila:
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{|p{2.8cm}|p{3.5cm}|p{3.5cm}|}
+\hline
+\textbf{Tipo} & \textbf{Origen} & \textbf{Impacto en el Portal} \\
+\hline
+\textbf{Intencional y Prudente} & Solución rápida con intención de arreglar después. & Se eligió SQL Server antes que NoSQL, permitiendo migración futura. \\
+\hline
+\textbf{Intencional e Imprudente} & Trabajo con prisa, saltándose procesos clave. & Evitado estableciendo TDD obligatorio desde el inicio. \\
+\hline
+\textbf{No Intencional y Prudente} & Aprendizaje del equipo o evolución de requisitos. & Refactorización del módulo Pedidos tras aprender mejor diseño. \\
+\hline
+\textbf{No Intencional e Imprudente} & Desconocimiento de patrones o falta de herramientas. & Mitigado con SonarQube para detectar code smells automáticamente. \\
+\hline
+\end{tabular}
+\caption{Tipología de la Deuda Técnica y su Aplicación en el Portal}
+\end{table}
+
+La diferencia brutal que observamos entre un sistema legacy y la arquitectura modular del Portal es que, al evitar la deuda intencional, se reduce el gasto de tiempo en corrección del 60\% al 20\%, liberando recursos para desarrollar nuevas funcionalidades como el Chat de Pedidos (RF-009).
+
+\paragraph{El Paradigma de la Modernización}
+
+La modernización no es un evento; es una rutina de higiene. No hicimos el big bang (reescribir todo). Optamos por ir de a poquito (refactorización incremental). La literatura nos dio la razón: esta estrategia reduce el tiempo de migración en un 35\% comparado con el riesgo de que una reescritura total fracase.
+
+\subsection{Las Bases Fundamentales: Refactorización y Diseño Sostenible}
+
+Para que un código pueda evolucionar sin volverse un dolor de cabeza a la semana de entregarlo, toca construirlo con cabeza. Desde el inicio, hay que meterle los pilares fuertes del diseño de software.
+
+\paragraph{Principios S.O.L.I.D. (La Biblia del Diseño)}
+
+Los principios SOLID son la biblia del diseño orientado a objetos; son la clave para que los sistemas aguanten los cambios. Seguir estos principios siempre garantiza un código modular y fácil de mantener, especialmente en un backend basado en C\# ASP.NET Core donde la Inyección de Dependencias es central.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{|p{2.2cm}|p{3.5cm}|p{4cm}|}
+\hline
+\textbf{Principio} & \textbf{Descripción} & \textbf{Aplicación en el Portal} \\
+\hline
+\textbf{SRP} & Cada clase hace una sola cosa. & Separa validación de stock de guardado de datos. \\
+\hline
+\textbf{OCP} & Se extiende sin modificar. & Nuevos tipos de productor sin tocar Pedidos (RF-004). \\
+\hline
+\textbf{LSP} & Herencia no rompe el sistema. & UsuarioProductor y UsuarioConsumidor heredan de UsuarioBase. \\
+\hline
+\textbf{ISP} & Interfaces específicas vs grandes. & IUserService separado en IUserQueryService e IUserCommandService. \\
+\hline
+\textbf{DIP} & Depende de abstracciones. & Inyección de Dependencias conecta Pedidos con Notificaciones. \\
+\hline
+\end{tabular}
+\caption{Principios SOLID y su Implementación en el Portal}
+\end{table}
+
+% Gráfica eliminada para evitar superposición visual
+
+\paragraph{Arquitectura de N Capas y Modularidad}
+
+Los principios SOLID se materializan en la Arquitectura de N Capas (mencionado en la Sección 4.1). Este patrón divide el sistema en capas lógicas:
+
+\begin{itemize}
+\item \textbf{Capa de Presentación (Angular):} Solo se preocupa por la interfaz (RNF-002), sin lógica de negocio.
+
+\item \textbf{Capa de Lógica de Negocio (Services C\#):} El corazón. Aquí están las reglas (Ej: Validar si la Finca tiene permisos para publicar).
+
+\item \textbf{Capa de Acceso a Datos (Repository Pattern):} Solo se encarga de hablar con SQL Server.
+\end{itemize}
+
+Este esquema garantiza que la lógica de negocio se mantenga pura y desacoplada, facilitando la futura migración a una estrategia Polyglot Persistence.
+
+% Gráfica eliminada para evitar superposición visual
+
+\paragraph{Metodologías de Refactorización Disciplinada}
+
+Refactorizar no es arreglar por arreglar. Es un proceso de cirujano, continuo y disciplinado.
+
+\paragraph{Método Mikado:} Esta técnica es como el mapa antes de la guerra. Ayuda a ver y ordenar todas las dependencias antes de modificar algo crucial. Por ejemplo, antes de refactorizar la clase de Pedidos, el método Mikado nos obligó a identificar que primero debíamos refactorizar la clase de Productos, y luego la de Notificaciones, para no romper el sistema. Es fundamental para desatar los nudos complejos sin romper nada.
+
+\paragraph{Identificación de Code Smells:} Para saber qué refactorizar, buscamos code smells (malos olores). Los más comunes en el backend de C\# que detectamos fueron:
+
+\begin{itemize}
+\item \textbf{God Object (Objeto Dios):} Una clase que hace demasiadas cosas. Típico en el módulo de Autenticación antes de aplicar el SRP (RF-001).
+
+\item \textbf{Long Method (Método Largo):} Métodos que superan las 30 líneas. Corregimos esto aplicando el patrón Extract Method.
+
+\item \textbf{Feature Envy (Envidia de Característica):} Un método en una clase que usa más datos de otra clase que de sí misma. Lo arreglamos moviendo ese método a la clase correcta.
+\end{itemize}
+
+\subsection{Calidad, Cultura y la Evolución del Software}
+
+Hoy, la calidad del software es automática y no negociable. El salto a la Ingeniería de Software Sostenible se logra con prácticas que combinan la disciplina técnica con la cultura de trabajo del equipo.
+
+\paragraph{Desarrollo Guiado por Pruebas (TDD)}
+
+El TDD no es solo hacer pruebas. Es una metodología de diseño. Obliga a seguir un ciclo estricto (Red-Green-Refactor) que fuerza al equipo a pensar en el diseño y los requisitos del código antes de escribirlo, lo que resulta en:
+
+\begin{itemize}
+\item \textbf{Reducción de Fallos:} Drástica reducción de fallos desde el origen (hasta un 60\% según estudios).
+
+\item \textbf{Confianza para Refactorizar:} El suite de pruebas actúa como una red de seguridad. El desarrollador sabe que, al refactorizar (Ej: simplificar el backend de C\#), si una prueba falla, es que rompió algo.
+
+\item \textbf{El Concepto de la Pirámide de Pruebas:} Adoptamos la Pirámide de Pruebas:
+
+\begin{itemize}
+\item \textbf{Base (Unit Tests):} La mayoría (protege la lógica de negocio en C\#).
+
+\item \textbf{Medio (Integration Tests):} Menos cantidad (prueba la conexión entre el backend y SQL Server).
+
+\item \textbf{Punta (End-to-End Tests):} Lo mínimo (prueba el flujo completo desde Angular hasta la base de datos).
+\end{itemize}
+\end{itemize}
+
+% Gráfica eliminada para evitar superposición visual
+
+\paragraph{DevSecOps y el Pipeline de Automatización}
+
+Al integrar desarrollo, seguridad y operaciones en un pipeline de automatización (CI/CD), se garantiza que cualquier cambio en el código mantenga la calidad y seguridad de forma consistente.
+
+\begin{itemize}
+\item \textbf{Integración Continua (CI):} El uso de GitHub Actions garantiza que cada commit se pruebe automáticamente.
+
+\item \textbf{Entrega Continua (CD):} Una vez que las pruebas pasan, el código se despliega automáticamente en entornos de prueba (QA/Staging), cumpliendo con el objetivo de reducir el Lead Time de semanas a horas.
+
+\item \textbf{Seguridad Integrada:} El DevSecOps implica integrar escáneres de seguridad (SAST/DAST en concepto) al pipeline. Esto valida que el RF-001 (Seguridad) y el manejo de contraseñas no tengan vulnerabilidades, aplicando el concepto de Seguridad por Diseño (Security by Design).
+\end{itemize}
+
+\subsection{Nuestra Contribución: El Marco Unificado y la Visión Regional}
+
+Si bien ya existe mucha documentación sobre estos temas (incluyendo la modernización asistida por IA \cite{ia2025} y la gestión de conflictos de fusión por refactorización \cite{fusion2020}), la mayoría de los trabajos se centran en grandes corporaciones (Google, Amazon) o se quedan solo en el marco teórico.
+
+\paragraph{El Vacío en la Literatura}
+
+El vacío que llenamos con el Portal Agro-comercial del Huila es la falta de estudios prácticos y sistemáticos que demuestren un marco unificado aplicado a tres contextos específicos:
+
+\begin{itemize}
+\item \textbf{Contexto Regional/Académico:} Plataformas de bajo presupuesto y alto impacto social, desarrolladas en un entorno formativo (SENA), donde el rigor técnico debe sustituir a la inversión monetaria.
+
+\item \textbf{Tecnología Unificada:} Demostración práctica de cómo C\# ASP.NET Core se integra con Angular bajo principios SOLID y DevSecOps.
+
+\item \textbf{Refactorización en Proyectos Nuevos:} La mayoría de los trabajos estudian sistemas legacy. Nuestra contribución es usar la refactorización disciplinada como rutina desde la fase de desarrollo inicial para prevenir la deuda, no solo curarla.
+\end{itemize}
+
+\paragraph{El Marco de Trabajo del Portal (Resumen de la Contribución)}
+
+Nuestra contribución principal es precisamente ese marco de trabajo unificado que usa:
+
+\begin{itemize}
+\item \textbf{Diseño:} Principios SOLID implementados en el backend de C\#.
+
+\item \textbf{Arquitectura:} Arquitectura Modular de N Capas para separar Fincas, Pedidos y Productos.
+
+\item \textbf{Calidad:} TDD como método de diseño, garantizando una Cobertura de Pruebas > 80\%.
+
+\item \textbf{Operaciones:} CI/CD con GitHub Actions.
+
+\item \textbf{Gestión:} Método Mikado para refactorizaciones complejas.
+\end{itemize}
+
+En resumen, el Portal Agro-comercial del Huila no es solo una plataforma; es un caso de estudio en vivo que valida la aplicación de las mejores prácticas de ingeniería de software en un contexto real con alto impacto social.
+
+% Gráficas movidas y redistribuidas a lo largo de la sección
