@@ -1,0 +1,28 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{graphics/correlacion_devops.pdf}
+\caption{Correlación entre prácticas DevOps y métricas de rendimiento en agricultura digital.}
+\label{fig:correlacion_devops}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{graphics/evolucion_metricas.pdf}
+\caption{Evolución de métricas clave en la adopción de tecnologías agrícolas.}
+\label{fig:evolucion_metricas}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{graphics/metricas_dora.pdf}
+\caption{Métricas DORA aplicadas a procesos de transformación digital en el agro.}
+\label{fig:metricas_dora}
+\end{figure*}

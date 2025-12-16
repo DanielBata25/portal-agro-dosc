@@ -1,0 +1,9 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[1] Config.pm:331> INFO - Logfile is 'build/main_ieee.blg'
+[102] biber:342> INFO - === Thu Dec 11, 2025, 18:16:55
+[153] Biber.pm:421> INFO - Reading 'build/main_ieee.bcf'
+[236] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[256] bbl.pm:676> INFO - Writing 'build/main_ieee.bbl' with encoding 'UTF-8'
+[257] bbl.pm:779> INFO - Output to build/main_ieee.bbl
+[259] Biber.pm:132> WARN - The file 'build/main_ieee.bcf' does not contain any citations!
+[261] Biber.pm:134> INFO - WARNINGS: 1
